@@ -18,7 +18,7 @@ fun LocalDateTime.toFormattedDate(): String {
     val day = dayOfMonth.toString().padStart(2, '0')
     val month = monthNumber.toString().padStart(2, '0')
     val year = year.toString()
-    return "$day / $month / $year"
+    return "$year / $month / $day"
 }
 
 fun LocalDateTime.toFormattedTime(): String {
