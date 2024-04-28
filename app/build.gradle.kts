@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.hiltPlugin)
+    alias(libs.plugins.kotinxSerialization)
     kotlin("kapt")
 }
 
@@ -73,4 +74,11 @@ dependencies {
     implementation(libs.hilt.navigation.compose)
     implementation(libs.hilt.core)
     kapt(libs.hilt.compiler)
+
+    // kotlin datetime
+    implementation(libs.datetime)
+
+    // ktor client
+    implementation(libs.bundles.ktor)
+    implementation(libs.kotlin.serialization)
 }
