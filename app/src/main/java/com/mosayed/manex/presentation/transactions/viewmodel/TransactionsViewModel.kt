@@ -36,6 +36,7 @@ class TransactionsViewModel @Inject constructor(
                 _state.update {
                     it.copy(
                         isLoading = false,
+                        error = null,
                         transactions = transactions.toUI()
                     )
                 }
