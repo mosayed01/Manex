@@ -18,14 +18,18 @@ import androidx.compose.ui.unit.dp
 import com.mosayed.manex.R
 import com.mosayed.manex.presentation.theme.Black87
 import com.mosayed.manex.presentation.theme.White
+import com.mosayed.manex.presentation.transactions.viewmodel.ui_models.TransactionItemUI
 
 @Composable
-fun TransactionItem() {
+fun TransactionItem(
+    transaction: TransactionItemUI,
+    modifier: Modifier = Modifier,
+) {
     Card(
         elevation = CardDefaults.cardElevation(
             defaultElevation = 8.dp
         ),
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .padding(horizontal = 34.dp),
         shape = RoundedCornerShape(14.dp),
@@ -40,7 +44,7 @@ fun TransactionItem() {
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             Tile(
-                text = " 432 ج.م",
+                text = " ${transaction.price} ج.م",
                 iconPainter = painterResource(id = R.drawable.ic_egp),
                 iconColor = MaterialTheme.colorScheme.error,
                 textStyle = MaterialTheme.typography.bodyLarge.copy(
@@ -49,16 +53,16 @@ fun TransactionItem() {
                 textColor = Black87
             )
             Tile(
-                text = "الجيزة",
+                text = transaction.location,
                 iconPainter = painterResource(id = R.drawable.location),
             )
             Row {
                 Tile(
-                    text = "07 / 03 / 2024",
+                    text = transaction.date,
                     iconPainter = painterResource(id = R.drawable.calendar),
                 )
                 Tile(
-                    text = "12:07 مساءً",
+                    text = transaction.time,
                     iconPainter = painterResource(id = R.drawable.clock),
                     modifier = Modifier.padding(start = 16.dp)
                 )

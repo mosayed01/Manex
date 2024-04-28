@@ -70,6 +70,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     // hilt
+    implementation(libs.hilt.navigation.compose)
     implementation(libs.hilt.core)
     kapt(libs.hilt.compiler)
 }
