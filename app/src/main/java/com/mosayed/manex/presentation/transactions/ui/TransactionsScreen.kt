@@ -33,6 +33,7 @@ import com.mosayed.manex.presentation.theme.ManexTheme
 import com.mosayed.manex.presentation.transactions.ui.components.NumberOfTransactions
 import com.mosayed.manex.presentation.transactions.ui.components.TransactionItem
 import com.mosayed.manex.presentation.transactions.viewmodel.TransactionsViewModel
+import com.mosayed.manex.presentation.transactions.viewmodel.ui_models.TransactionItemUI
 import com.mosayed.manex.presentation.transactions.viewmodel.ui_models.TransactionsUIState
 import kotlinx.coroutines.flow.collectLatest
 
@@ -62,7 +63,7 @@ fun TransactionsScreen(
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun TransactionsScreenContent(
+private fun TransactionsScreenContent(
     state: TransactionsUIState,
     reloadTransactions: () -> Unit,
     modifier: Modifier = Modifier,
@@ -126,7 +127,16 @@ fun TransactionsScreenContent(
 private fun TransactionsScreenPreview() {
     ManexTheme {
         TransactionsScreenContent(
-            TransactionsUIState(),
+            TransactionsUIState(
+                transactions = listOf(
+                    TransactionItemUI(
+                    ),
+                    TransactionItemUI(
+                    ),
+                ),
+                isLoading = false,
+                error = null
+            ),
             {}
         )
     }
