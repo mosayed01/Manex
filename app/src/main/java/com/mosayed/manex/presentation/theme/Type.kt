@@ -1,4 +1,4 @@
-package com.mosayed.manex.ui.theme
+package com.mosayed.manex.presentation.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
@@ -39,7 +39,7 @@ val Typography = Typography(
     ),
     labelSmall = TextStyle(
         fontFamily = almaraiFamily,
-        fontWeight = FontWeight.Medium,
+        fontWeight = FontWeight.Normal,
         fontSize = 12.sp,
         lineHeight = 16.sp,
         letterSpacing = 0.5.sp

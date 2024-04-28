@@ -1,4 +1,4 @@
-package com.mosayed.manex.ui.theme
+package com.mosayed.manex.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
@@ -15,3 +15,4 @@ val Black12 = Color(0x1F000000)
 val White = Color(0xFFFFFFFF)
 
 val Gray = Color(0xFFC9CBD5)
+val DarkGray = Color(0xFF6A6D7E)
