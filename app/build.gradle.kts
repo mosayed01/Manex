@@ -81,4 +81,8 @@ dependencies {
     // ktor client
     implementation(libs.bundles.ktor)
     implementation(libs.kotlin.serialization)
+
+    // navigation
+    implementation(libs.androidx.compose.navigation)
+
 }
